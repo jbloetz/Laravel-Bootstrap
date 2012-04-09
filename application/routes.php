@@ -11,13 +11,8 @@ Route::post('admin/setup',function(){
 	if(Setup::setup_complete()){
 		return Redirect::to('/admin');
 	}else{
-
         $rules = array(
-            'username'  => 'required|max:255',
-            'first_name'  => 'required|max:255',
-            'last_name'  => 'required|max:255',
-            'email' => 'required|email',
-            'password' => 'required|confirmed',
+            'username'=>'required|max:255','first_name'=>'required|max:255','last_name'=>'required|max:255','email'=>'required|email','password'=>'required|confirmed',
         );
         $validation = Validator::make(Input::all(), $rules);
         if ($validation->fails())
@@ -32,7 +27,7 @@ Route::post('admin/setup',function(){
             $usr->first_name = Input::get('first_name');
             $usr->last_name = Input::get('last_name');
             $usr->active = 1;
-            $usr->admin = Input::get('admin') ? 1 : 0;
+            $usr->admin = 1;
             $usr->password = Input::get('password');
             $usr->save();
             return Redirect::to('/admin');
@@ -47,6 +42,7 @@ Route::controller('admin.news');
 Route::controller('admin.users');
 Route::controller('admin.roles');
 Route::controller('admin.sections');
+Route::controller('admin.gallery');
 Route::controller('admin.pages');
 Route::controller('admin.help');
 
