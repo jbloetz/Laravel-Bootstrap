@@ -1,0 +1,10 @@
+.container.loginwindow { width:500px; margin:0 auto; text-align:center; }
+.container.loginwindow h1 { margin-bottom:20px; }
+.crud textarea,
+.crud input[type="text"],
+.crud input[type="password"]{ width:400px; }
+.right { float:right; }
+.crud label { font-weight:700; }
+.crud .controls label { font-weight:400; }
+div.alert { margin-top:10px; margin-bottom:10px; }
+div.alert p { margin:0; }
