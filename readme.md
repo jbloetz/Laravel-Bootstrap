@@ -14,7 +14,7 @@ I used to have a CodeIgniter bootstrap framework that dealt with basic CRUD stuf
 ### Setting Up The Database
 
 - Edit application/config/database.php
-- Find the values saying "fw2" and change to your own configuration
+- Find the values saying "laravelbootstrap" and change to your own configuration
 - Then goto your application URL and append: /admin/setup
 - You will need to remove the routes for this in application/routes.php as this isn't automated yet.
 
