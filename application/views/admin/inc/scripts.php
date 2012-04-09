@@ -9,4 +9,9 @@
 	if($('#content')){
 		$('#content').wysihtml5();
 	}
+	if($('.editable_text')){
+		$('.editable_text').each(function(index,elem) {
+			$(elem).wysihtml5();
+		});
+	}
 </script>
