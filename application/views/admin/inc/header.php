@@ -11,7 +11,7 @@
             <ul class="nav">
               <li class="<?=( URI::is('admin/dashboard') ? 'active' : false )?>"><a href="<?=url('admin/dashboard')?>">Home</a></li>
               <li class="<?=( URI::segment(2) == 'news' ? 'active' : false )?>"><a href="<?=url('admin/news')?>">News</a></li>
-              <li class="<?=( URI::segment(2) == 'gallery' ? 'active' : false )?>"><a href="<?=url('admin/gallery')?>">Gallery</a></li>
+              <li class="<?=( URI::segment(2) == 'gallery' || URI::segment(2) == 'images' ? 'active' : false )?>"><a href="<?=url('admin/gallery')?>">Galleries</a></li>
               <li class="<?=( URI::segment(2) == 'pages' || URI::segment(2) == 'sections' ? 'active' : false )?>"><a href="<?=url('admin/pages')?>">CMS Pages</a></li>
               <li class="<?=( URI::segment(2) == 'users' || URI::segment(2) == 'roles' ? 'active' : false )?>"><a href="<?=url('admin/users')?>">Users &amp; Roles</a></li>
               <li class="<?=( URI::segment(2) == 'help' ? 'active' : false )?>"><a href="<?=url('admin/help')?>">Help &amp; Support</a></li>
