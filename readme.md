@@ -18,8 +18,11 @@ I used to have a CodeIgniter bootstrap framework that dealt with basic CRUD stuf
 - Then goto your application URL and append: /admin/setup
 - You will need to remove the routes for this in application/routes.php as this isn't automated yet.
 
+### Notes
 
-### Contributing to Laravel
+Things in here are unfinished and a lot of it is undocumented. I've done most of what I can and there will be lots of bugs. This is just a starting point for what I'm hoping will turn into a nice bootstrap for plonking into a new client's website or even your own.
+
+### Contributing to Laravel Bootstrap
 
 Contributions are encouraged and welcome. All commits must be signed off using the "-s" switch.
 
