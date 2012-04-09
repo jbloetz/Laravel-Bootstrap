@@ -2,4 +2,3 @@ favicon.*
 .DS_Store
 public/uploads/*
 !public/uploads/index.php
-application/config/database.php
