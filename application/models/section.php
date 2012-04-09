@@ -12,4 +12,8 @@ class Cmsection extends Eloquent {
 	public function get_updated_at(){
 		return date('j-M-y H:i',strtotime($this->get_attribute('updated_at')));
 	}
+	public function user()
+	{
+		return $this->belongs_to('User');
+	}
 }

@@ -24,7 +24,6 @@ class Upload extends Eloquent {
 			return $upload;
         }
      }
-
      public function user()
      {
           return $this->belongs_to('User');
