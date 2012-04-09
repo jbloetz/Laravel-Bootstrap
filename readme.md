@@ -1,48 +1,26 @@
-## Laravel - A PHP Framework For Web Artisans
+## Laravel Bootstrap
 
-Laravel is a clean and classy framework for PHP web development. Freeing you from spaghetti code, Laravel helps you create wonderful applications using simple, expressive syntax. Development should be a creative experience that you enjoy, not something that is painful. Enjoy the fresh air.
-
-### [Official Website & Documentation](http://laravel.com)
+I used to have a CodeIgniter bootstrap framework that dealt with basic CRUD stuff, news articles, image galleries, users, permissions etc. All based on the amazing Laravel framework.
 
 ### Feature Overview
 
-- Simple routing using Closures or controllers.
-- Views and templating.
-- Driver based session and cache handling.
-- Database abstraction with query builder.
-- Authentication.
-- Migrations.
-- PHPUnit Integration.
-- A lot more.
+- News Articles (with image uploads)
+- User Management
+- Role Management
+- Help and Support (sends an email from a form in the backend)
+- Gallery and Images (not implemented yet, database structure built)
+- Setup Of Database and User Automatic
 
-### A Few Examples
+### Setting Up The Database
 
-**Hello World:**
+- Edit application/config/database.php
+- Find the values saying "fw2" and change to your own configuration
+- Then goto your application URL and append: /admin/setup
+- You will need to remove the routes for this in application/routes.php as this isn't automated yet.
 
-	Route::get('/', function()
-	{
-		return "Hello World!":
-	});
-
-**Passing Data To Views:**
-
-	Route::get('user/(:num)', function($id)
-	{
-		$user = DB::table('users')->find($id);
-
-		return View::make('profile')->with('user', $user);
-	});
-
-**Redirecting & Flashing Data To The Session:**
-
-	return Redirect::to('profile')->with('message', 'Welcome Back!');
 
 ### Contributing to Laravel
 
-Contributions are encouraged and welcome; however, please review the Developer Certificate of Origin in the "license.txt" file included in the repository. All commits must be signed off using the "-s" switch.
+Contributions are encouraged and welcome. All commits must be signed off using the "-s" switch.
 
 	git commit -s -m "this commit will be signed off automatically!"
-
-### License
-
-Laravel is open-sourced software licensed under the MIT License.
