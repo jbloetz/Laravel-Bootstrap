@@ -77,6 +77,23 @@ class Admin_Images_Controller extends Admin_Controller
         }
     }
 
+    /**
+     * Update the order of the returned image IDs
+     * @return boolean
+     */
+    public function post_update_order(){
+        $decoded = json_decode(Input::get('data'));
+        if($decoded){
+            foreach($decoded as $order=>$id){
+                if($img = Image::find($id)){
+                    $img->order = $order;
+                    $img->save();
+                }
+            }
+        }
+        return true;
+    }
+
     public function post_edit(){
         $rules = array(
             'id'  => 'required|exists:gallery_images',

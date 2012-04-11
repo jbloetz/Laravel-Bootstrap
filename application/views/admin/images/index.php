@@ -26,7 +26,7 @@
                   foreach($gallery->image as $img){
                     if($img->uploads){
                       foreach($img->uploads as $up){
-                        echo '<li class="span2">
+                        echo '<li class="span2" rel="'.$img->id.'">
                         <div class="thumbnail">
                           <img src="'.asset('uploads/'.$up->thumb_filename).'" />
                           <div class="caption">
@@ -71,6 +71,22 @@
     </div>
     <?=View::make('admin.inc.scripts')->render()?>
     <script>
+
+    $( "ul.gallery_images" ).sortable({
+      update: function(event, ui) {
+        var order = new Array();
+        $('ul.gallery_images li').each(function(index,elem) {
+          order[index] = $(elem).attr('rel');
+        });
+        $.ajax({
+          type: 'POST',
+          url: "<?=action('admin.images@update_order')?>",
+          data: 'data='+JSON.stringify(order),
+        });
+      }
+    });
+    $( "ul.gallery_images" ).disableSelection();
+
       $('#delete_image').modal({
         show:false
       }); // Start the modal
