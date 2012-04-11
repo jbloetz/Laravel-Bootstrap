@@ -43,6 +43,7 @@ Route::controller('admin.users');
 Route::controller('admin.roles');
 Route::controller('admin.sections');
 Route::controller('admin.gallery');
+Route::controller('admin.images');
 Route::controller('admin.pages');
 Route::controller('admin.help');
 
