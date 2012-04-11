@@ -37,8 +37,14 @@ class Admin_Gallery_Controller extends Admin_Controller
         }else{
             Uploadr::remove('gallery',Input::get('id'));
             $gallery = Gallery::find(Input::get('id'));
+            if($gallery->image){
+                foreach($gallery->image as $img){
+                    Uploadr::remove('image',$img->id);
+                }
+            }
+            $gallery->image()->delete();
             $gallery->delete();
-            Messages::add('success','Gallery Removed');
+            Messages::add('success','Gallery &amp; All Images Removed');
             return Redirect::to('admin/'.$this->views.'');
         }
     }
