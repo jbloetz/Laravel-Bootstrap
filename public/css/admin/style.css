@@ -8,3 +8,7 @@
 .crud .controls label { font-weight:400; }
 div.alert { margin-top:10px; margin-bottom:10px; }
 div.alert p { margin:0; }
+.gallery_images .caption { text-align:center; }
+.gallery_images .caption small { font-style:italic; }
+.gallery_images .caption p { margin-bottom:0; }
+.gallery_images .caption .action_buttons { margin:3px 0; }

@@ -28,9 +28,12 @@
                       foreach($img->uploads as $up){
                         echo '<li class="span2" rel="'.$img->id.'">
                         <div class="thumbnail">
-                          <img src="'.asset('uploads/'.$up->thumb_filename).'" />
+                          <img src="'.asset('uploads/'.$up->small_filename).'" />
                           <div class="caption">
-                            <a class="btn btn-primary" href="'.action('admin.images@edit', array($img->id)).'">Edit</a> <a class="delete_toggler btn btn-danger" rel="'.$img->id.'">Delete</a>
+                            <p>'.$img->title.'</p>
+                            <div class="action_buttons"><a class="label label-info" href="'.action('admin.images@edit', array($img->id)).'">Edit</a> <a class="delete_toggler label label-important" rel="'.$img->id.'">Delete</a></div>
+                            <p><small>Drag To Order</small></p>
+                            
                           </div>
                         </div></li>';
                       }
